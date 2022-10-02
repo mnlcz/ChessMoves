@@ -1,4 +1,5 @@
 ﻿namespace ChessMoves.Extras;
+
 public static class Conversor
 {
     // Pre: @codigo valido
