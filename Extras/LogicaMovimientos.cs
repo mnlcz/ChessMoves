@@ -1,4 +1,4 @@
-namespace EJ5;
+namespace ChessMoves.Extras;
 public static class LogicaMovimientos
 {
     public static void Norte(List<string> mov, Pieza p)

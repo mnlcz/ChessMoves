@@ -1,7 +1,9 @@
-namespace EJ5;
-public class Reina : Pieza
+﻿using ChessMoves.Extras;
+namespace ChessMoves.Piezas;
+
+public class Torre : Pieza
 {
-    public Reina(string posicion) : base(posicion) => Nombre = 'Q';
+    public Torre(string posicion) : base(posicion) => Nombre = 'T';
 
     public override List<string> Movimientos()
     {
@@ -10,8 +12,6 @@ public class Reina : Pieza
         LogicaMovimientos.Sur(movimientos, this);
         LogicaMovimientos.Este(movimientos, this);
         LogicaMovimientos.Oeste(movimientos, this);
-        LogicaMovimientos.DiagonalEste(movimientos, this);
-        LogicaMovimientos.DiagonalOeste(movimientos, this);
         return movimientos;
     }
 }

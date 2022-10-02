@@ -1,4 +1,4 @@
-﻿using EJ5;
+﻿using ChessMoves;
 
 Juego.InicializarTablero();
 Console.Write("Pieza a testear -> (P)eon - (T)orre - (C)aballo - (A)lfil - (Q)ueen - K(ing) <--: ");

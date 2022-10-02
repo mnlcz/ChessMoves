@@ -1,4 +1,6 @@
-namespace EJ5;
+using ChessMoves.Extras;
+namespace ChessMoves.Piezas;
+
 public class Alfil : Pieza
 {
     public Alfil(string posicion) : base(posicion) => Nombre = 'A';

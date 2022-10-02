@@ -1,4 +1,6 @@
-﻿namespace EJ5;
+﻿using ChessMoves.Extras;
+using ChessMoves.Piezas;
+namespace ChessMoves;
 
 public static class Juego
 {
@@ -17,7 +19,7 @@ public static class Juego
         var tableroTemporal = new char[8, 8];
         LogicaInicializar(tableroTemporal);
         LogicaPonerPieza(tableroTemporal, p);
-        foreach(var i in p.Movimientos())
+        foreach (var i in p.Movimientos())
         {
             var (x, y) = Conversor.Coordenada(i);
             tableroTemporal[x, y] = 'o';
@@ -46,7 +48,7 @@ public static class Juego
     public static void TestPeon() => LogicaTest(new Peon("d2"));
 
     public static void TestTorre() => LogicaTest(new Torre("d4"));
-    
+
     public static void TestCaballo() => LogicaTest(new Caballo("d4"));
 
     public static void TestAlfil() => LogicaTest(new Alfil("d3"));

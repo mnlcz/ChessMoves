@@ -1,4 +1,4 @@
-﻿namespace EJ5;
+﻿namespace ChessMoves;
 
 public abstract class Pieza
 {

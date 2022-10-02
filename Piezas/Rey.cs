@@ -1,4 +1,6 @@
-namespace EJ5;
+using ChessMoves.Extras;
+namespace ChessMoves.Piezas;
+
 public class Rey : Pieza
 {
     public Rey(string posicion) : base(posicion) => Nombre = 'K';
