@@ -50,6 +50,8 @@ public static class Juego
     public static void TestCaballo() => LogicaTest(new Caballo("d4"));
 
     public static void TestAlfil() => LogicaTest(new Alfil("d3"));
+
+    public static void TestReina() => LogicaTest(new Reina("d4"));
     #endregion
 
     #region LOGICA
