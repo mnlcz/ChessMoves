@@ -117,6 +117,44 @@ public static class LogicaMovimientos
         CalcularMovimiento(mov, x + 1, y - 1);
     }
 
+    public static void Norte1(List<string> mov, Pieza p)
+    {
+        var (x, y) = Conversor.Coordenada(p.Posicion);
+        CalcularMovimientoSimple(mov, x - 1, y + 1);
+    }
+
+    public static void Sur1(List<string> mov, Pieza p)
+    {
+        var (x, y) = Conversor.Coordenada(p.Posicion);
+        CalcularMovimientoSimple(mov, x + 1, y + 1);
+    }
+
+    public static void Este1(List<string> mov, Pieza p)
+    {
+        var (x, y) = Conversor.Coordenada(p.Posicion);
+        CalcularMovimientoSimple(mov, x, y + 2);
+    }
+
+    public static void Oeste1(List<string> mov, Pieza p)
+    {
+        var (x, y) = Conversor.Coordenada(p.Posicion);
+        CalcularMovimientoSimple(mov, x, y);
+    }
+
+    public static void DiagonalEste1(List<string> mov, Pieza p)
+    {
+        var (x, y) = Conversor.Coordenada(p.Posicion);
+        CalcularMovimientoSimple(mov, x - 1, y + 2);
+        CalcularMovimientoSimple(mov, x + 1, y + 2);
+    }
+
+    public static void DiagonalOeste1(List<string> mov, Pieza p)
+    {
+        var (x, y) = Conversor.Coordenada(p.Posicion);
+        CalcularMovimientoSimple(mov, x - 1, y);
+        CalcularMovimientoSimple(mov, x + 1, y);
+    }
+
     #region Auxiliares
     private static (int x1, int y1, int x2, int y2) SetupDiagonales(Pieza p)
     {
@@ -126,5 +164,11 @@ public static class LogicaMovimientos
 
     private static void CalcularMovimiento(List<string> movimientos, int x, int y)
         => movimientos.Add(Conversor.Codigo(x, y));
+
+    private static void CalcularMovimientoSimple(List<string> movimientos, int x, int y)
+    {
+        if (x < 8 && x >= 0 && y < 8 && y >= 0)
+            movimientos.Add(Conversor.Codigo(x, y));
+    }
     #endregion
 }
